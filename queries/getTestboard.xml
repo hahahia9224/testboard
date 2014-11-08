@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<query id="getTestboard" action="select">
+	<tables>
+		<table name="testboard" />
+	</tables>
+	<columns>
+		<column name="*" />
+	</columns>
+	<conditions>
+		<condition operation="equal" column="board_srl" var="board_srl" notnull="notnull" />
+	</conditions>
+</query>

@@ -1,0 +1,45 @@
+<table>
+    <col width="25" />
+    <col width="100" />
+    <col width="200" />
+    <col width="200" />
+    <tr> 
+        <th>No</th>
+        <th>제목</th> 
+        <th>글쓴이</th> 
+        <th>등록일</th>
+    <block cond="Context::get('logged_info')->is_admin==Y">
+        <th>삭제</th>
+    </block>
+    </tr>
+    <block loop="$testboard_list=>$key,$val">
+    <tr>
+        <td align="center">{$key}</td>
+        <td align="center">
+            <a href="{getUrl('act', 'dispTestboarddetailView', 'board_srl', $val->board_srl)}">{$val->title}</a>
+        </td>
+        <td align="center">{$val->writer}</td>
+        <td align="center">{(zdate($val->reg_date,"Y-m-d\nH:i:s"))}</td>
+        <block cond="Context::get('logged_info')->is_admin==Y">
+        <td>
+            <button onclick="location.href='{getUrl('act', 'dispTestboardDelete', 'board_srl', $val->board_srl)}';">삭제</button>
+        </td>
+        </block>
+    </tr>
+    </block>
+    <tr> 
+        <td colspan="4" align="center">
+            <a href="{getUrl('page','','module_srl','')}" class="goToFirst" style="text-decoration:none;"> ◀ </a> 
+            <block loop="$page_no = $page_navigation->getNextPage()">
+                <block cond="$page==$page_no">
+                    <span class="current">{$page_no}</span> 
+                </block>
+                <block cond="$page!=$page_no">
+                    <a href="{getUrl('page',$page_no,'module_srl','')}">{$page_no}</a>
+                </block>
+            </block>
+            <a href="{getUrl('page',$page_navigation->last_page,'module_srl','')}" class="goToLast" style="text-decoration:none;"> ▶ </a>
+        </td>
+    </tr>
+</table>
+<button onclick="location.href='{getUrl('act', 'dispTestboardWriteform')}';">글쓰기</button>

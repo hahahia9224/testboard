@@ -1,0 +1,7 @@
+<table name="testboard">
+	<column name="board_srl" type="number" size="11" notnull="notnull" primary_key="primary_key" /> 
+	<column name="title" type="varchar" size="255" notnull="notnull" /> 
+	<column name="writer" type="varchar" size="255" notnull="notnull" /> 
+	<column name="contents" type="bigtext" />
+	<column name="reg_date" type="date"/>
+</table>

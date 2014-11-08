@@ -1,0 +1,22 @@
+<!--%import("filter/delete_testboard.xml")-->
+<!--%import("js/testboard.js")-->
+
+{$lang->testboard_delete_page} <br><br>
+
+<hr>
+
+제목 : {$testboard->title} <br>
+작성자 : {$testboard->writer} <br>
+내용 : {$testboard->contents} <br>
+등록일자 : {(zdate($testboard->reg_date,"Y-m-d\nH:i:s"))} <br>
+
+<hr>
+
+<h1>이 게시물을 삭제하시겠습니까?</h1>
+
+<form action="./" method="POST" onsubmit="return procFilter(this, delete_testboard)">
+	<input type="hidden" name="board_srl" value="{$testboard->board_srl}">
+	<input type="submit" value="삭제"/>
+</form>
+<br>
+<button onclick="location.href='{getUrl('act', 'dispTestboardList', 'board_srl', '')}';">글 목록 보기</button>

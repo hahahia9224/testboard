@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module version="0.2">
+    <title xml:lang="ko">testboard</title>
+    <description xml:lang="ko">testboard</description>
+    <version>0.1</version>
+    <date>2014-10-18</date>
+    <category>service</category>
+    <author email_address="hahahia9224@gmail.com" link="http://newheart.kr">
+        <name xml:lang="ko">hahahia</name>
+    </author>
+</module>

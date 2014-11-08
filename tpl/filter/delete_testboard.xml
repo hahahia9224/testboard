@@ -1,0 +1,10 @@
+<filter name="delete_testboard" module="testboard" act="procTestboardDeletePage" confirm_msg_code="confirm_delete">
+    <form>
+    	<node target="board_srl" required="true"/>
+    </form>
+    <parameter />
+    <response callback_func="completeDeleteTestboard">
+        <tag name="error" />
+        <tag name="message" />
+    </response>
+</filter>

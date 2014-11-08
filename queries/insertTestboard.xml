@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<query id="insertTestboard" action="insert">
+    <tables>
+        <table name="testboard" />
+    </tables>
+    <columns>
+        <column name="board_srl" var="board_srl" notnull="notnull" />
+        <column name="title" var="title" notnull="notnull" />
+        <column name="writer" var="writer" notnull="notnull" />
+        <column name="contents" var="contents" />
+        <column name="reg_date" var="reg_date" />
+    </columns>
+</query>

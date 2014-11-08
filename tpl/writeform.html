@@ -1,0 +1,33 @@
+<!--%import("filter/insert_testboard.xml")-->
+<!--%import("js/testboard.js")-->
+<meta charset='utf-8'>
+
+{$lang->testboard_write_page}
+
+<form action="./" method="POST" onsubmit="return procFilter(this, insert_testboard)">
+<table>
+    <tr>
+    	<td>제목</td>
+    	<td><input type="text" name="title" size="50"/></td>
+    </tr>
+    <!--@if(!$is_logged)-->
+    <tr>
+    	<td>글쓴이(비로그인 사용자)</td>
+    	<td><input type="text" name="writer" size="30"/></td>
+    </tr>
+    <!--@else-->
+    <tr>
+        <td>글쓴이</td>
+        <td><input type="text" name="writer" size="30" value="{Context::get('logged_info')->user_id}"/></td>
+    </tr>
+    <!--@end-->
+    </block>
+    <tr>
+    	<td>내용</td>
+    	<td><textarea name="contents" cols="80" rows="10"></textarea></td>
+    </tr>
+</table>
+<input type="submit" value="입력"/>
+</form>
+<br>
+<button onclick="location.href='{getUrl('act', 'dispTestboardList')}';">글 목록 보기</button>

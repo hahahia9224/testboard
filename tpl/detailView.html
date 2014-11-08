@@ -1,0 +1,8 @@
+{$lang->testboard_detail_view_page} <br><br>
+
+제목 : {$testboard->title} <br>
+작성자 : {$testboard->writer} <br>
+내용 : {$testboard->contents} <br>
+등록일자 : {(zdate($testboard->reg_date,"Y-m-d\nH:i:s"))} <br>
+<br>
+<button onclick="location.href='{getUrl('act', 'dispTestboardList', 'board_srl', '')}';">글 목록 보기</button>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang>
+	<item name="testboard_write_page">
+		<value xml:lang="ko"><![CDATA[게시판 글쓰기 페이지]]></value>
+	</item>
+	<item name="testboard_detail_view_page">
+		<value xml:lang="ko"><![CDATA[게시판 상세보기 페이지]]></value>
+	</item>
+	<item name="testboard_delete_page">
+		<value xml:lang="ko"><![CDATA[게시판 글 삭제 페이지]]></value>
+	</item>
+</lang>

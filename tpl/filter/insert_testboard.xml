@@ -1,0 +1,12 @@
+<filter name="insert_testboard" module="testboard" act="procTestboardWritePage" confirm_msg_code="confirm_submit">
+    <form>
+    	<node target="title" required="true" maxlength="200"/>
+    	<node target="writer" required="true" maxlength="200"/>
+    	<node target="contents" required="true" maxlength="200"/>
+    </form>
+    <parameter />
+    <response callback_func="completeInsertTestboard">
+        <tag name="error" />
+        <tag name="message" />
+    </response>
+</filter>
