@@ -9,14 +9,12 @@
 		{
 			$output = executeQueryArray("testboard.getTestboardList", $args);
             if(!$output->data) $output->data = array();
-
             return $output;
 		}
 		function getTestboard($obj)
 		{
             $output = executeQueryArray("testboard.getTestboard", $obj);
             if(!$output->data) $output->data = array();
-
             return $output;
 		}
 	}
